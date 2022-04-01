@@ -1,0 +1,19 @@
+@import "/src/Components/main.css";
+
+.footer-container{
+    width: 100%;
+    height:12vh;
+    padding:1rem;
+    background-color: var(--secondary-color);
+    color:var(--white-color);
+    margin-top:1rem;
+}
+.contact-logo a{
+    font-size:var(--special-font-size);
+    padding:var(--special-padding);
+    color:var(--logo-color);
+}
+.footer-text{
+    font-size:var(--special-font-size);
+    color:var(--logo-color);
+}
