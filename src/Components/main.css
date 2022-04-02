@@ -1,0 +1,30 @@
+:root {
+    --primary-color:#e0e0e0;
+    --secondary-color:rgb(15, 3, 46);
+    --white-color:white;
+    --logo-color:#e0e0e0;
+    --specailColor:rgb(211, 232, 243);
+    --shopHoverColor:rgb(226, 113, 113);
+    --badge-bg-color: rgb(161, 19, 19);
+    --special-font-size:1.2rem;
+    --special-padding:0.5rem;
+    --border-redius:1rem;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--primary-color);
+    font-family: 'Open Sans', sans-serif;
+}
+a{
+    text-decoration:none;
+}
+button{
+    cursor: pointer;
+}

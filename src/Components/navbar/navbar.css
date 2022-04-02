@@ -1,0 +1,71 @@
+@import "/src/Components/main.css";
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Permanent+Marker&family=Satisfy&family=Shadows+Into+Light&display=swap');
+
+.navbar{
+    background-color: var(--secondary-color);
+    color:var(--white-color);
+    padding:1.5rem;
+    border-radius: 0rem 0rem 0rem 3rem;
+}
+.navbar .header-container{
+    display: grid;
+    grid-template-columns: 25rem 1fr 20rem;
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.navbar .nav-icons{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.navbar .header-container .heading{
+    font-family: 'Satisfy', cursive;
+    flex:1;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: bold;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+.navbar .header-container .nav-icons{
+    display: inline-flex;
+}
+
+.navbar .header-container .nav-icons a{
+    font-size: 1.8rem;
+    padding: 2rem;
+    text-decoration: none;
+    color: var(--primary-text-color);
+    position: relative;
+}
+.navbar .header-container .search-bar input{
+    height:2.5rem;
+    width:30rem;
+    display: flex;
+    font-size:var(--special-font-size);
+    border: none; 
+    padding:0.5rem;
+    outline: none;
+    border-bottom-left-radius:0.2rem ;
+    border-top-left-radius:0.2rem ;
+
+}
+.headHover:hover{
+    color: rgb(179, 24, 132);
+
+}
+.items-badge{
+    position: absolute;
+    text-align: center;
+    font-size:var(--special-font-size);
+    font-weight: bold;
+    background-color:var(--badge-bg-color);
+    color:var(--specailColor);
+    border-radius: 50%;
+    height:1.4rem;
+    width: 1.4rem;
+    right:1.3rem;
+    top:1.5rem;
+}
