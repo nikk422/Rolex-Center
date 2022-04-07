@@ -2,7 +2,7 @@ import "./footer.css";
 
 export const Footer = () => {
   return (
-    <h1>hello footer</h1>
+    <h1>hello footer hi to h</h1>
 //       <div className="footer-container">
 //         <h2 className="footer-text headHover">
 //           Made with <i className="fa fa-code "></i> by Nikhil Malviya
