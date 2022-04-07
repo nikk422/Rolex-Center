@@ -3,7 +3,8 @@ import "./footer.css";
 export const Footer = () => {
   return (
     <footer>
-      <div className="footer-container">
+    <h1>hello footer</h1>
+//       <div className="footer-container">
 //         <h2 className="footer-text headHover">
 //           Made with <i className="fa fa-code "></i> by Nikhil Malviya
 //         </h2>
@@ -21,7 +22,7 @@ export const Footer = () => {
 //           ></a>
 //         </div> 
                  
-      </div>
+//       </div>
     </footer>
   );
 };
