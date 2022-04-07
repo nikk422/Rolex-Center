@@ -2,7 +2,6 @@ import "./footer.css";
 
 export const Footer = () => {
   return (
-    <footer>
     <h1>hello footer</h1>
 //       <div className="footer-container">
 //         <h2 className="footer-text headHover">
@@ -23,6 +22,5 @@ export const Footer = () => {
 //         </div> 
                  
 //       </div>
-    </footer>
-  );
+  )
 };
