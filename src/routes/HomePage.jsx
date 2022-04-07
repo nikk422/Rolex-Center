@@ -1,6 +1,4 @@
 import "./homePage.css";
-import { Navbar } from "../Components/navbar/Navbar";
-import { Footer } from "../Components/footer/Footer";
 import {Genre} from "../Components/genre/Genre";
 import {GenreProduct} from "../Components/genre/GenreProduct";
 import home from "../../src/assets/rolex8.jpg";
@@ -9,7 +7,6 @@ import {Link} from "react-router-dom";
 export default function HomePage() {
   return (
     <div>
-      <Navbar />
       <Genre/>
       <div className="home-image">
         <img src={home} alt="homePage" className="image-responsive" />
@@ -23,8 +20,7 @@ export default function HomePage() {
           </button>
         </div>
       </div>
-      <GenreProduct/>
-      <Footer />
+      <GenreProduct/>    
     </div>
   );
 }

@@ -1,0 +1,63 @@
+:root{
+    --special-fontsize:1.2rem;
+    --special-width:100%;
+    --cursor:pointer;
+    --border:0px;
+    --border-radius:50%;
+    --special-padding:0.5rem;
+    --secondary-padding:1.8rem;
+    --white-color:white;
+    --grey-color:grey;
+    --light-grey:rgb(235, 224, 224);
+    --cart-color:rgb(81, 67, 155);
+    --carHover-color:rgb(82, 75, 75);
+    --blue:rgb(69, 69, 206);
+}
+
+.main-container{
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.filter-container{
+    display:flex;
+    flex-direction: column;
+    gap:0.7rem;
+    width: 15rem;
+    height: 100vh;
+    border: 2px solid white;
+    margin: 0.5rem;
+    padding: 0.2rem;
+    position:sticky;
+    top:0;
+}
+.filter{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: var(--special-fontsize);
+    margin-bottom:0.8rem;
+}
+.clearBtn{
+    border:var(--border);
+    text-decoration: underline;
+    font-size: var(--special-fontsize);
+}
+.price-range{
+    display: flex;
+    justify-content: space-between;
+}
+.range{
+    width:14rem;
+}
+.filter-lable{
+    display: flex;
+    gap:0.6rem;
+    padding:0.4rem;
+}
+.category{
+    display: flex;
+    gap:0.6rem;
+    padding:0.3rem;
+}
+
