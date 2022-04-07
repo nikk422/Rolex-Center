@@ -4,7 +4,6 @@ import watch2 from "../../assets/watch6.jpg";
 import watch3 from "../../assets/rolex5.jpg";
 import watch4 from "../../assets/rolex7.jpg";
 import watch5 from "../../assets/rolex10.jpg";
-import watch6 from "../../assets/watch4.jpg";
 import watch7 from "../../assets/watch7.jpg";
 
 /**
@@ -15,32 +14,31 @@ import watch7 from "../../assets/watch7.jpg";
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "DATE JUST",
+    categoryName: "DATE-JUST",
     image:watch7
   },
   {
     _id: uuid(),
-    categoryName: "OYSTER ",
+    categoryName: "DATE-JUST",
     image:watch2
   },
   {
     _id: uuid(),
-    categoryName: "DAY DATE",
+    categoryName: "DATE-JUST",
     image:watch3
   },
   {
     _id: uuid(),
-    categoryName: "GOLDEN",
+    categoryName: "DATE-JUST",
     image:watch4
   },
   {
     _id: uuid(),
-    categoryName: "SILVER",
+    categoryName: "DATE-JUST",
     image:watch5
   },
-  {
-    _id: uuid(),
-    categoryName: "DIAMOND",
-    image:watch6
-  }
+  // {
+  //   _id: uuid(),
+  //   categoryName: "DIAMOND",
+  // }
 ];

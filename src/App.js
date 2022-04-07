@@ -5,10 +5,14 @@ import Login from "./routes/authentication-page/login"
 import Product from "./routes/product-page/product";
 import MyCart from "./routes/mycart-page/mycart"
 import Wishlist  from "./routes/wishlist-page/wishlist";
+import  {Navbar} from "./Components/navbar/Navbar";
+import { Footer } from "./Components/footer/Footer";
+
 
 function App() {
   return (
     <div className="App">
+    <Navbar/>
     <Routes>
       <Route path="/" element ={<HomePage/>}/>
       <Route path="/Login" element ={<Login/>}/>
@@ -16,6 +20,7 @@ function App() {
       <Route path="/MyCart" element ={<MyCart/>}/>
       <Route path="/Wishlist" element ={<Wishlist/>}/>
     </Routes>
+    <Footer />
       </div>
   );
 }

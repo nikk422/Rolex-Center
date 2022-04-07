@@ -1,14 +1,17 @@
 import "./navbar.css";
 import {Link} from "react-router-dom";
+import {useProductContext} from "../../context/ProductContext";
 
 export const Navbar = () => {
+
+  const { productDispatch}=useProductContext();
   return (
     <div>
       <nav className="navbar">
           <ul className="header-container">
             <li className="heading headHover">Rolex watch store</li>
             <li className="search-bar">
-              <input  type="search" placeholder="search here.."></input>
+              <input onChange={(e)=>{productDispatch({type:"SEARCH",payload:e.target.value})}}  type="search" placeholder="search here.."></input>
             </li>
             <div className="nav-icons">
                 <li><Link to="/Login"><i className="fa fa-user headHover"></i></Link></li>
