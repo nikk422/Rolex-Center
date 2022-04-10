@@ -1,12 +1,14 @@
 @import "/src/Components/main.css";
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Permanent+Marker&family=Satisfy&family=Shadows+Into+Light&display=swap');
 
+
 .navbar{
     background-color: var(--secondary-color);
     color:var(--white-color);
     padding:1.5rem;
     border-radius: 0rem 0rem 0rem 3rem;
-    
+    position: sticky;
+    top: 0;
 }
 .navbar .header-container{
     display: grid;
@@ -30,7 +32,9 @@
     font-weight: bold;
     justify-content: flex-start;
     cursor: pointer;
+    color:white;
 }
+
 .navbar .header-container .nav-icons{
     display: inline-flex;
 }

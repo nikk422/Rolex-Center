@@ -1,7 +1,9 @@
-
+import {RenderWishlist} from "../../Components/wishlistListing/wishlistListing";
 
 export default function Wishlist(){
     return(
-        <h1>comming soon....</h1>
+        <div>
+            <RenderWishlist/>
+        </div>
         )
 }

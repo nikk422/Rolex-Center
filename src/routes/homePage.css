@@ -1,10 +1,10 @@
 @import "/src/Components/main.css";
 
 .image-responsive{
-    width:97%;
-    height:85vh;
+    width:96%;
+    height:80vh;
     margin: 1rem 0.5rem 0.5rem 0.5rem;
-    border-radius: 2rem;
+    border-radius: 0.5rem;
     box-shadow: 0 8px 12px 0 black;
 }
 .image-responsive:hover{
@@ -36,10 +36,11 @@
 }
 .shop-btn {
     position: absolute;
-    right: 1.5rem;
-    bottom: 15rem;
-    width: 40rem;
-    color:var(--specailColor);
+    left: 25rem;
+    bottom: -7rem;
+    width: 35rem;
+    color:black;
+    font-weight: bold;
 }
 .pro-name{
     font-weight: bold;
@@ -49,6 +50,7 @@
     padding:var(--special-padding);
      margin: 0.5rem;
      background-color:var(--specailColor);
+     color:white;
      font-weight:bold;
      font-size:var(--special-font-size);
      text-decoration: none;

@@ -1,7 +1,13 @@
 import React from "react";
 import { useProductContext } from "../../context/ProductContext";
+import { useWishlistCart } from "../../context/wishlistCartContext";
+import { Link } from "react-router-dom";
 
 const GetProduct = () => {
+  const {
+    wishlistCartState: { wishlist, cart },
+    dispatchWishlistCart,
+  } = useWishlistCart();
   const {
     products,
     productState: {
@@ -12,8 +18,7 @@ const GetProduct = () => {
       byHomeDelivery,
       byRating,
       byRange,
-      categories
-     
+      categories,
     },
   } = useProductContext();
   const transFormProduct = () => {
@@ -48,30 +53,73 @@ const GetProduct = () => {
     if (byRange) {
       sortedProd = sortedProd.filter((prod) => prod.price >= byRange);
     }
-    if (categories[0]!==undefined){
-      sortedProd = sortedProd.filter(prod => categories.includes(prod.Brand));
+    if (categories[0] !== undefined) {
+      sortedProd = sortedProd.filter((prod) => categories.includes(prod.Brand));
     }
     return sortedProd;
   };
   return (
     <div className="product-cate">
-      {transFormProduct().map(
-        ({ price, rating, Brand, Image, delivery,discount,stock }) => (
-          <div className="pro-cat">
-              <img src={Image} alt="product" className=" img-pro" />
-              <button className="heart"><i style={{fontSize:"27px"}} class="fa">&#10084;</i></button>
+      {transFormProduct().map((item) => (
+        <div className="pro-cat">
+          <img src={item.Image} alt="product" className=" img-pro" />
 
-            <p className="pro-name">{Brand}</p>
-            <div className="features">
-              <p>{stock ? <div>InStock</div> : <div>Out Of Stock</div>}</p>
-              <p>{delivery ? <div>FastDelivary</div> : <div>3-4 Days</div>}</p>
-              <p className="rating">Rating {rating}</p>
-            </div>
-            <h3>₹{price}<small className="discount-off">₹{discount}</small></h3>
-            <button className="AddCartBtn headHover">Add To Cart 🛒</button>
+          <p className="pro-name">{item.Brand}</p>
+          <div className="features">
+            <p>{item.stock ? <div>InStock</div> : <div>Out Of Stock</div>}</p>
+            <p>
+              {item.delivery ? <div>FastDelivary</div> : <div>3-4 Days</div>}
+            </p>
+            <p className="rating">Rating {item.rating}</p>
           </div>
-        )
-      )}
+          <h3>
+            ₹{item.price}
+            <small className="discount-off">₹{item.discount}</small>
+          </h3>
+          {wishlist.some((data) => data.id === item.id) ? (
+            <button
+              className="Added-Btn"
+              onClick={() =>
+                dispatchWishlistCart({
+                  type: "REMOVE_FROM_WISHLIST",
+                  payload: item,
+                })
+              }
+              className=" heart red-heart"
+            >
+              <i style={{ fontSize: "27px" }} class="fa">
+                &#10084;
+              </i>
+            </button>
+          ) : (
+            <button
+              className="heart-Btn"
+              onClick={() =>
+                dispatchWishlistCart({ type: "ADD_TO_WISHLIST", payload: item })
+              }
+              className="heart black-heart"
+            >
+              <i style={{ fontSize: "27px" }} class="fa">
+                &#10084;
+              </i>
+            </button>
+          )}
+          {cart.some((data) => data.id === item.id) ? (
+            <Link to="/MyCart" className="Added-cart-Btn">
+              <button className="CartBtn goCart ">Go to Cart</button>
+            </Link>
+          ) : (
+            <button
+              onClick={() =>
+                dispatchWishlistCart({ type: "ADD_TO_CART", payload: item })
+              }
+              className="CartBtn  addCart headHover"
+            >
+              Add To Cart 🛒
+            </button>
+          )}
+        </div>
+      ))}
     </div>
   );
 };
