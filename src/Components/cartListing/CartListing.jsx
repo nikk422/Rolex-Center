@@ -104,7 +104,6 @@ const RenderCart = () => {
                   </div>
 
                   </div>
-                  {/* </div> */}
                   {/* <div className="btnContain">
                     <button
                       className="gowishlist"
