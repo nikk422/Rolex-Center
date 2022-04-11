@@ -1,7 +1,9 @@
+import {RenderCart} from "../../Components/cartListing/CartListing"
+
 export default function MyCart(){
     return(
         <div>
-         <h1>comming soon....</h1>
+        <RenderCart/>
          </div>
     )
 }

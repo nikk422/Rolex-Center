@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Permanent+Marker&family=Rubik+Wet+Paint&family=Satisfy&family=Shadows+Into+Light&display=swap');
+@import "../../Components/filter/filter.css";
+
 
 .product-contain{
     display:flex;
@@ -14,7 +16,6 @@
 .pro-cat{
     background-color:rgb(226, 216, 216);
     position: relative;
-
     padding:1rem;
 }
 .pro-cat:hover{
@@ -31,18 +32,41 @@
     opacity: 0.9;
 
 }
-.AddCartBtn{
+.CartBtn{
     width:14.8rem;
     padding:0.4rem;
     margin-top:0.2rem;
-    background-color: var(--secondary-color);
     font-weight:bold;
     font-size:1rem;
-    color:white;
     border-radius: 0.3rem;
 }
-.AddCartBtn:hover{
+.addCart{
+    background-color: var(--secondary-color);
+    color:var(--white-color);
+}
+.shop-now{
+    background-color: var(--secondary-color);
+    width:8rem;
+    padding: 0.5rem;
+    color:var(--white-color);
+}
+.goCart{
+    background-color: rgb(59, 40, 57);
+    color:var(--white-color);
+}
+.goCart:hover{
+    background-color:rgb(88, 79, 88);
+}
+.addCart:hover{
     background-color:rgb(30, 30, 68);
+}
+.go-to-cart{
+    width:14.8rem;
+    padding:0.4rem;
+    margin-top:0.2rem;
+    font-weight:bold;
+    font-size:1rem;
+    border-radius: 0.3rem;
 }
 .heart{
     position: absolute;
@@ -53,12 +77,12 @@
     padding:0.3rem;
     border:0px;
 }
-.heart:hover{
+.red-heart{
     color:red;
 }
 .discount-off{
     margin-left: 0.5rem;
     text-decoration: line-through;
-    color:grey;
+    color:var(--grey-color);
 }
 

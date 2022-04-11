@@ -1,7 +1,7 @@
 import "./homePage.css";
 import {Genre} from "../Components/genre/Genre";
 import {GenreProduct} from "../Components/genre/GenreProduct";
-import home from "../../src/assets/rolex8.jpg";
+import home from "../../src/assets/hero4.jpg";
 import {Link} from "react-router-dom";
 
 export default function HomePage() {
