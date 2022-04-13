@@ -92,7 +92,6 @@ const GetProduct = () => {
             </button>
           ) : (
             <button
-              // className="heart-Btn"
               onClick={() =>
                 dispatchWishlistCart({ type: "ADD_TO_WISHLIST", payload: item })
               }
