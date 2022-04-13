@@ -9,10 +9,12 @@ const RenderWishlist = () => {
   } = useWishlistCart();
   return (
     <div>
-      <h2>My wishlist ({wishlist.length})</h2>
-      <Link to="/Product">
-        <button class="shop-now">SHOP NOW</button>
-      </Link>
+      <div className="centerHead">
+        <h2>My wishlist ({wishlist.length})</h2>
+        <Link to="/Product">
+          <button class="shop-now">SHOP NOW</button>
+        </Link>
+      </div>
       <div className="product-cate">
         {wishlist.map((item) => {
           return (

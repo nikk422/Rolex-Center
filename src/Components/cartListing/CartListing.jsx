@@ -26,17 +26,18 @@ const RenderCart = () => {
 
   return (
     <div>
-      <h2>My Cart ({cart.length})</h2>
-      <Link to="/Product">
-        <button className="shop-now">SHOP NOW</button>
+      <div className="centerHead">
+        <h2>My Cart ({cart.length})</h2>
+        <Link to="/Product">
+          <button className="shop-now">SHOP NOW</button>
         </Link>
-      
+      </div>
+
       <div className="MyCart-container">
         <div className="cart-cate">
           {cart.map((item) => {
             return (
               <div className="pro-container">
-              
                 <div className="cart-img">
                   <img src={item.Image} className="img-pro" alt="poduct" />
                 </div>
@@ -72,37 +73,36 @@ const RenderCart = () => {
                       -
                     </button>
                     <div className="btnContain">
-                    <button
-                      className="gowishlist"
-                      onClick={() =>
-                        dispatchWishlistCart({
-                          type: "REMOVE_FROM_CART",
-                          payload: item,
-                        })
-                      }
-                    >
-                      Remove from Cart
-                    </button>
-
-                    {wishlist.some((data) => data.id === item.id) ? (
-                      <Link to="/wishlist">
-                        <button className="gowishlist">Go to Wishlist</button>
-                      </Link>
-                    ) : (
                       <button
-                        className="gowishlist  addCart "
+                        className="gowishlist"
                         onClick={() =>
                           dispatchWishlistCart({
-                            type: "ADD_TO_WISHLIST",
+                            type: "REMOVE_FROM_CART",
                             payload: item,
                           })
                         }
                       >
-                        Add to Wishlist
+                        Remove from Cart
                       </button>
-                    )}
-                  </div>
 
+                      {wishlist.some((data) => data.id === item.id) ? (
+                        <Link to="/wishlist">
+                          <button className="gowishlist">Go to Wishlist</button>
+                        </Link>
+                      ) : (
+                        <button
+                          className="gowishlist  addCart "
+                          onClick={() =>
+                            dispatchWishlistCart({
+                              type: "ADD_TO_WISHLIST",
+                              payload: item,
+                            })
+                          }
+                        >
+                          Add to Wishlist
+                        </button>
+                      )}
+                    </div>
                   </div>
                   {/* <div className="btnContain">
                     <button
@@ -157,9 +157,7 @@ const RenderCart = () => {
           <button class="orderBtn">PLACE ORDER</button>
         </div>
       </div>
-      
     </div>
-    
   );
 };
 
