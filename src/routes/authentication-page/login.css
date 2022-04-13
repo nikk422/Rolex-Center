@@ -1,0 +1,64 @@
+:root{
+    --special-fontsize:1.2rem;
+    --special-width:100%;
+    --cursor:pointer;
+    --border:0px;
+    --border-radius:50%;
+    --special-padding:0.5rem;
+    --secondary-padding:1.8rem;
+    --white-color:white;
+    --hover-color:rgb(44, 53, 99);
+    --login-color:rgb(49, 132, 165);
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+} 
+.login{
+    width: 22rem;
+    display:flex;
+    flex-direction:column;
+    background-color: var(--secondary-color);
+    align-items:center;
+    color:var(--white-color);
+    gap: 0.7rem ;
+    padding: 1rem;
+    margin-top: 5rem;
+}
+.authLable{
+    display:block;
+    width: 19rem;
+    padding:var(--special-padding);
+    outline:none;
+    font-size:0.8rem;
+}
+.rememberBtn{
+    cursor: var(--cursor);
+}
+.forget-link{
+    text-decoration: none;
+    margin-left: 1rem;
+    color:red;
+}
+.loginBtn{
+    background-color:var(--login-color);
+    width: 15rem;
+    font-size:1rem;
+    padding:var(--special-padding);
+    color:var(--white-color);
+    border:var(--border);
+    cursor: var(--cursor);
+}
+.loginBtn:hover{
+    background-color:var(--hover-color);
+}
+
+.CreateBtn{
+    width: 10rem;
+    padding:0.1rem;
+    border: var(--border);
+    cursor: var(--cursor);
+}
