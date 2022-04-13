@@ -78,7 +78,6 @@ const GetProduct = () => {
           </h3>
           {wishlist.some((data) => data.id === item.id) ? (
             <button
-              className="Added-Btn"
               onClick={() =>
                 dispatchWishlistCart({
                   type: "REMOVE_FROM_WISHLIST",
@@ -93,7 +92,7 @@ const GetProduct = () => {
             </button>
           ) : (
             <button
-              className="heart-Btn"
+              // className="heart-Btn"
               onClick={() =>
                 dispatchWishlistCart({ type: "ADD_TO_WISHLIST", payload: item })
               }
