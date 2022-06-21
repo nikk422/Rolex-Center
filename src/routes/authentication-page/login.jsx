@@ -3,8 +3,8 @@ import {Link} from "react-router-dom";
 
 export default function Login(){
     return(
-        <div className="container">
-        <div className="login">
+        <div className="container flex-column align-center">
+        <div className="login flex-column align-center">
             <h1><strong> Login </strong></h1>
             <label for="email">
                 Email address

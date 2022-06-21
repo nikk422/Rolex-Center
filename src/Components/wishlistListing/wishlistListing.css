@@ -15,7 +15,7 @@
 }
 .goCart{
     background-color: rgb(59, 40, 57);
-    color:white;
+    color:var(--white-color);
 }
 .centerHead{
     text-align:center;

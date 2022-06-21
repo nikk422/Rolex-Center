@@ -1,21 +1,14 @@
 @import "../filter/filter.css";
 
 .pro-container{
-    display:flex;
     height:35vh;
     gap:1.5rem;   
     border: 1px solid black;
     margin:2rem;
     background-color:rgb(226, 216, 216);
 }
-.MyCart-container{
-    display:flex;
-    position:relative;
-    justify-content:center;
-}
+
 .btnContain{
-    display:flex;
-    flex-direction:column;
     margin-top: 6rem;
     padding-bottom: 2rem;;
 }
@@ -50,11 +43,8 @@
     margin: 0.5rem;
 }
 .cartItems{
-    display: flex;
-    flex-direction: column;
     margin-top:1rem;
-    margin-top: 2rem;;
-    justify-content:center;
+    margin-top: 2rem;
 }
 .count-num{
     border:1px solid black;
@@ -62,8 +52,6 @@
     font-size:1rem;
 }
 .pro-contain{
-    display:flex;
-    justify-content: space-between;
     padding:0.5rem;
 }
 

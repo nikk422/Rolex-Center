@@ -6,7 +6,11 @@ import rolex5 from "../../assets/rolex13.jpg";
 import rolex6 from "../../assets/rolex14.jpg";
 import rolex7 from "../../assets/rolex10.jpg";
 
+import {Link} from "react-router-dom";
+import {useProductContext} from "../../context/ProductContext";
+
  const product = [
+
   {
     id: uuid(),
     ProductImage: rolex1,
@@ -35,13 +39,17 @@ import rolex7 from "../../assets/rolex10.jpg";
 ];
 
 export const GenreProduct = () => {
+  const {productDispatch}=useProductContext();
+
   return (
     <div className="product-cate">
       {product.map((item) => 
-        <div className="genre-cat">
+        <Link to="/Product">
+        <div className="genre-cat" onClick={() => productDispatch({type:"CATEGORY",payload:item.productName})}>
           <img src={item.ProductImage} alt="product" className=" img-res" />
           <p className="pro-name">{item.productName}</p>
         </div>
+        </Link>
       )}
     </div>
   );

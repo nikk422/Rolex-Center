@@ -1,4 +1,5 @@
 import "./App.css";
+import "../src/styless/utility.css";
 import {Routes,Route} from "react-router-dom";
 import HomePage from "./routes/HomePage";
 import Login from "./routes/authentication-page/login"

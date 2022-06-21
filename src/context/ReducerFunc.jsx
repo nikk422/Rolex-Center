@@ -1,9 +1,6 @@
-export const productReduce = (state, action) => {
-    console.log("gggg",action.type)
-        console.log("ccccc",action.payload,action.type)
+ const productReduce = (state, action) => {
     switch (action.type) {
         case "SORT_BY_PRICE":
-            console.log(action.payload,"payload")
             return {...state,sort:action.payload}
 
         case "CATEGORY":
@@ -43,6 +40,7 @@ export const productReduce = (state, action) => {
                 return state;
     }
 
-
-
 }
+
+export default  productReduce 
+    

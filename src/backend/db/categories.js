@@ -37,8 +37,5 @@ export const categories = [
     categoryName: "DATE-JUST",
     image:watch5
   },
-  // {
-  //   _id: uuid(),
-  //   categoryName: "DIAMOND",
-  // }
+
 ];

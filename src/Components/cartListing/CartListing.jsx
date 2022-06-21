@@ -32,131 +32,108 @@ const RenderCart = () => {
           <button className="shop-now">SHOP NOW</button>
         </Link>
       </div>
-
-      <div className="MyCart-container">
-        <div className="cart-cate">
-          {cart.map((item) => {
-            return (
-              <div className="pro-container">
-                <div className="cart-img">
-                  <img src={item.Image} className="img-pro" alt="poduct" />
-                </div>
-                <div className="cartItems">
-                  <h4>New Rolex {item.Brand} watch</h4>
-                  <h2>
-                    ₹{item.price}
-                    <small className="discount-off">₹{item.discount}</small>
-                  </h2>
-                  <div className="product-quantity">
-                    <small>Quantity : </small>
-                    <button
-                      onClick={() =>
-                        dispatchWishlistCart({
-                          type: "INCREASE",
-                          payload: item,
-                        })
-                      }
-                      className="count-Btn"
-                    >
-                      +
-                    </button>
-                    <small className="count-num">{item.cartQ}</small>
-                    <button
-                      onClick={() =>
-                        dispatchWishlistCart({
-                          type: "DECREASE",
-                          payload: item,
-                        })
-                      }
-                      className="count-Btn"
-                    >
-                      -
-                    </button>
-                    <div className="btnContain">
+      {cart.length !== 0 ? (
+        <div className="MyCart-container flex justify-center positon-relative">
+          <div className="cart-cate">
+            {cart.map((item) => {
+              return (
+                <div className="pro-container flex">
+                  <div className="cart-img">
+                    <img src={item.Image} className="img-pro" alt="poduct" />
+                  </div>
+                  <div className="cartItems flex-column justify-center ">
+                    <h4>New Rolex {item.Brand} watch</h4>
+                    <h2>
+                      ₹{item.price}
+                      <small className="discount-off">₹{item.discount}</small>
+                    </h2>
+                    <div className="product-quantity">
+                      <small>Quantity : </small>
                       <button
-                        className="gowishlist"
                         onClick={() =>
                           dispatchWishlistCart({
-                            type: "REMOVE_FROM_CART",
+                            type: "INCREASE",
                             payload: item,
                           })
                         }
+                        className="count-Btn"
                       >
-                        Remove from Cart
+                        +
                       </button>
-
-                      {wishlist.some((data) => data.id === item.id) ? (
-                        <Link to="/wishlist">
-                          <button className="gowishlist">Go to Wishlist</button>
-                        </Link>
-                      ) : (
+                      <small className="count-num">{item.cartQ}</small>
+                      <button
+                        onClick={() =>
+                          dispatchWishlistCart({
+                            type: "DECREASE",
+                            payload: item,
+                          })
+                        }
+                        className="count-Btn"
+                      >
+                        -
+                      </button>
+                      <div className="btnContain flex-column">
                         <button
-                          className="gowishlist  addCart "
+                          className="gowishlist"
                           onClick={() =>
                             dispatchWishlistCart({
-                              type: "ADD_TO_WISHLIST",
+                              type: "REMOVE_FROM_CART",
                               payload: item,
                             })
                           }
                         >
-                          Add to Wishlist
+                          Remove from Cart
                         </button>
-                      )}
+
+                        {wishlist.some((data) => data.id === item.id) ? (
+                          <Link to="/wishlist">
+                            <button className="gowishlist">
+                              Go to Wishlist
+                            </button>
+                          </Link>
+                        ) : (
+                          <button
+                            className="gowishlist  addCart "
+                            onClick={() =>
+                              dispatchWishlistCart({
+                                type: "ADD_TO_WISHLIST",
+                                payload: item,
+                              })
+                            }
+                          >
+                            Add to Wishlist
+                          </button>
+                        )}
+                      </div>
                     </div>
                   </div>
-                  {/* <div className="btnContain">
-                    <button
-                      className="gowishlist"
-                      onClick={() =>
-                        dispatchWishlistCart({
-                          type: "REMOVE_FROM_CART",
-                          payload: item,
-                        })
-                      }
-                    >
-                      Remove from Cart
-                    </button>
-
-                    {wishlist.some((data) => data.id === item.id) ? (
-                      <Link to="/wishlist">
-                        <button className="gowishlist">Go to Wishlist</button>
-                      </Link>
-                    ) : (
-                      <button
-                        className="gowishlist  addCart "
-                        onClick={() =>
-                          dispatchWishlistCart({
-                            type: "ADD_TO_WISHLIST",
-                            payload: item,
-                          })
-                        }
-                      >
-                        Add to Wishlist
-                      </button>
-                    )}
-                  </div> */}
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
+          <div className="pro-detail">
+            <h4>PRICE DETAILS</h4>
+            <div class="price pro-contain flex-justify-between">
+              <p>ITEMS</p>
+              <p>{totalCartItem}</p>
+            </div>
+            <div class="delivery pro-contain flex-justify-between">
+              <p>Delivery Charges</p>
+              <p> ₹0</p>
+            </div>
+            <div class="total-amount pro-contain flex-justify-between">
+              <h3>TOTAL AMOUNT</h3>
+              <h3>₹{totalCartValue}</h3>
+            </div>
+            <button class="orderBtn">PLACE ORDER</button>
+          </div>
         </div>
-        <div className="pro-detail">
-          <h4>PRICE DETAILS</h4>
-          <div class="price pro-contain">
-            <p>ITEMS</p>
-            <p>{totalCartItem}</p>
-          </div>
-          <div class="delivery pro-contain">
-            <p>Delivery Charges</p>
-            <p> ₹0</p>
-          </div>
-          <div class="total-amount pro-contain">
-            <h3>TOTAL AMOUNT</h3>
-            <h3>₹{totalCartValue}</h3>
-          </div>
-          <button class="orderBtn">PLACE ORDER</button>
+      ) : (
+        <div className="centerHead">
+        <h3> Your  Cart is empty </h3>
+        
         </div>
-      </div>
+      )}
     </div>
   );
 };
