@@ -18,7 +18,7 @@ export const Footer = () => {
         </a>
         <a
           className="headHover logo"
-          href="https://twitter.com/NikhilM21013002"
+          href="https://twitter.com/nikmalviya422"
         >
           <i className="fa fa-twitter"></i>
         </a>
