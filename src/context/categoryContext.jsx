@@ -7,7 +7,6 @@ const categoryContext = createContext();
 const CategoryContextProvider=({children})=>{
 
     const [category, setCategory] = useState([]);
-    // console.log(category)
     useEffect(()=>{
         (async ()=>{
             try{

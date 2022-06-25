@@ -9,6 +9,9 @@ import MyCart from "./routes/mycart-page/mycart"
 import Wishlist  from "./routes/wishlist-page/wishlist";
 import  {Navbar} from "./Components/navbar/Navbar";
 import { Footer } from "./Components/footer/Footer";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 function App() {
@@ -23,6 +26,7 @@ function App() {
       <Route path="/MyCart" element ={<MyCart/>}/>
       <Route path="/Wishlist" element ={<Wishlist/>}/>
     </Routes>
+    <ToastContainer/>
     <Footer />
       </div>
   );

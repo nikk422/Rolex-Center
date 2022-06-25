@@ -2,6 +2,8 @@ import React from "react";
 import { useProductContext } from "../../context/ProductContext";
 import { useWishlistCart } from "../../context/wishlistCartContext";
 import { Link } from "react-router-dom";
+import {  toast } from 'react-toastify';
+
 
 const GetProduct = () => {
   const {
@@ -59,9 +61,9 @@ const GetProduct = () => {
     return sortedProd;
   };
   return (
-    <div className="product-cate">
+    <div className="product-cate flex flex-wrap margin-top-16p flex-center positon-relative gap-2r">
       {transFormProduct().map((item) => (
-        <div className="pro-cat">
+        <div className="pro-cat padding-16p positon-relative">
           <img src={item.Image} alt="product" className=" img-pro" />
 
           <p className="pro-name">{item.Brand}</p>
@@ -78,11 +80,14 @@ const GetProduct = () => {
           </h3>
           {wishlist.some((data) => data.id === item.id) ? (
             <button
-              onClick={() =>
+              onClick={() =>{return(
+
                 dispatchWishlistCart({
                   type: "REMOVE_FROM_WISHLIST",
                   payload: item,
-                })
+                }),
+                toast.error("Remove to Wishlist",{position: "top-right"})
+                )}
               }
               className=" heart red-heart"
             >
@@ -92,8 +97,10 @@ const GetProduct = () => {
             </button>
           ) : (
             <button
-              onClick={() =>
-                dispatchWishlistCart({ type: "ADD_TO_WISHLIST", payload: item })
+              onClick={() =>{return(
+                dispatchWishlistCart({ type: "ADD_TO_WISHLIST", payload: item }),
+                toast.success("Successfully Added in Wishlist",{position: "top-right"})
+              )}
               }
               className="heart black-heart"
             >
@@ -104,14 +111,16 @@ const GetProduct = () => {
           )}
           {cart.some((data) => data.id === item.id) ? (
             <Link to="/MyCart" className="Added-cart-Btn">
-              <button className="CartBtn goCart ">Go to Cart</button>
+              <button className="CartBtn goCart font-16p ">Go to Cart</button>
             </Link>
           ) : (
             <button
-              onClick={() =>
-                dispatchWishlistCart({ type: "ADD_TO_CART", payload: item })
+              onClick={() =>{return(
+                dispatchWishlistCart({ type: "ADD_TO_CART", payload: item }),
+                toast.success("Successfully Added in Cart",{position: "top-right"})
+              )}
               }
-              className="CartBtn  addCart headHover"
+              className="CartBtn  addCart headHover font-16p"
             >
               Add To Cart 🛒
             </button>

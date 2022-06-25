@@ -10,6 +10,7 @@
     --hover-color:rgb(44, 53, 99);
     --login-color:rgb(49, 132, 165);
 }
+
 .container{
     width: 100%;
 } 
@@ -17,33 +18,24 @@
     width: 22rem;
     background-color: var(--secondary-color);
     color:var(--white-color);
-    gap: 0.7rem ;
-    padding: 1rem;
-    margin-top: 3rem;
 }
 .authLable{
     display:block;
     width: 19rem;
-    padding:var(--special-padding);
     outline:none;
-    font-size:0.8rem;
 }
 .rememberBtn{
     cursor: var(--cursor);
 }
 .forget-link{
     text-decoration: none;
-    margin-left: 1rem;
     color:red;
 }
 .loginBtn{
     background-color:var(--login-color);
     width: 15rem;
-    font-size:1rem;
-    padding:var(--special-padding);
     color:var(--white-color);
     border:var(--border);
-    cursor: var(--cursor);
 }
 .loginBtn:hover{
     background-color:var(--hover-color);
@@ -51,7 +43,5 @@
 
 .CreateBtn{
     width: 10rem;
-    padding:0.1rem;
     border: var(--border);
-    cursor: var(--cursor);
 }

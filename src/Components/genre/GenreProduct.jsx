@@ -42,7 +42,7 @@ export const GenreProduct = () => {
   const {productDispatch}=useProductContext();
 
   return (
-    <div className="product-cate">
+    <div className="product-cate flex flex-wrap margin-top-16p flex-center positon-relative gap-2r">
       {product.map((item) => 
         <Link to="/Product">
         <div className="genre-cat" onClick={() => productDispatch({type:"CATEGORY",payload:item.productName})}>

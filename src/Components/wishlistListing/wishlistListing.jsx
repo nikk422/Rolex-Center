@@ -1,24 +1,29 @@
 import "./wishlistListing.css";
 import { useWishlistCart } from "../../context/wishlistCartContext";
 import { Link } from "react-router-dom";
+import {toast} from"react-toastify";
+  
 
 const RenderWishlist = () => {
   const {
     wishlistCartState: { wishlist, cart },
     dispatchWishlistCart,
   } = useWishlistCart();
+
+
+
   return (
     <div>
       <div className="centerHead">
         <h2>My wishlist ({wishlist.length})</h2>
         <Link to="/Product">
-          <button class="shop-now">SHOP NOW</button>
+          <button  className="shop-now">SHOP NOW</button>
         </Link>
       </div>
-      <div className="product-cate">
+      <div className="product-cate flex flex-wrap margin-top-16p flex-center positon-relative gap-2r">
         {wishlist.map((item) => {
           return (
-            <div className="pro-cat">
+            <div className="pro-cat padding-16p positon-relative">
               <img src={item.Image} alt="product" className=" img-pro" />
 
               <p className="pro-name">{item.Brand}</p>
@@ -41,11 +46,13 @@ const RenderWishlist = () => {
               </h3>
               {wishlist.some((data) => data.id === item.id) ? (
                 <button
-                  onClick={() =>
+                  onClick={() =>{return(
                     dispatchWishlistCart({
                       type: "REMOVE_FROM_WISHLIST",
                       payload: item,
-                    })
+                    }),
+                    toast.error("Remove to Wishlist",{position: "top-right"})
+                    )}
                   }
                   className=" heart red-heart"
                 >
@@ -71,14 +78,14 @@ const RenderWishlist = () => {
 
               {cart.some((data) => data.id === item.id) ? (
                 <Link to="/MyCart">
-                  <button class="cartBtn goCart">Move to Cart</button>
+                  <button class="cartBtn goCart font-16p">Move to Cart</button>
                 </Link>
               ) : (
                 <button
                   onClick={() =>
                     dispatchWishlistCart({ type: "ADD_TO_CART", payload: item })
                   }
-                  className="CartBtn  addCart headHover"
+                  className="CartBtn  addCart headHover font-16p"
                 >
                   Add To Cart 🛒
                 </button>

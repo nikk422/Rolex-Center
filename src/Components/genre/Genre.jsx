@@ -8,7 +8,6 @@ export const Genre=()=>{
         try{
             const res= await axios.get("/api/categories")
             setCategories(res.data.categories);
-            console.log(res.data.categories)
         }catch(err){
             console.log(err)
         }
@@ -18,11 +17,10 @@ export const Genre=()=>{
     }, []);
     return(
         <header className="header-home-section">
-        <div className="product-cate">
+        <div className="product-cate flex flex-wrap margin-top-16p flex-center positon-relative gap-2r">
             {categories.map(item =>
                 <div className="category category-1">
                     <img src={item.image} alt="product" className="img-res" />
-                    <div className="category-title">{item.categoryName}</div>
                 </div>
             )}
         </div>

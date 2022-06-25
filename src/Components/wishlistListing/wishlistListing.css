@@ -1,18 +1,4 @@
-.wish-cate{
-    width: 100%;
-    display:flex;
-    flex-direction: row;
-    justify-content:center;
-}
-.cartBtn{
-    width:14.8rem;
-    padding:0.4rem;
-    margin-top:0.2rem;
-    font-weight:bold;
-    font-size:1rem;
-    border-radius: 0.3rem;
-    background-color:va;
-}
+
 .goCart{
     background-color: rgb(59, 40, 57);
     color:var(--white-color);

@@ -1,6 +1,7 @@
 import { useWishlistCart } from "../../context/wishlistCartContext";
 import "./cartListing.css";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const RenderCart = () => {
   const {
@@ -75,12 +76,17 @@ const RenderCart = () => {
                       <div className="btnContain flex-column">
                         <button
                           className="gowishlist"
-                          onClick={() =>
-                            dispatchWishlistCart({
-                              type: "REMOVE_FROM_CART",
-                              payload: item,
-                            })
-                          }
+                          onClick={() => {
+                            return (
+                              dispatchWishlistCart({
+                                type: "REMOVE_FROM_CART",
+                                payload: item,
+                              }),
+                              toast.error("Remove to Cart", {
+                                position: "top-right",
+                              })
+                            );
+                          }}
                         >
                           Remove from Cart
                         </button>
@@ -130,8 +136,7 @@ const RenderCart = () => {
         </div>
       ) : (
         <div className="centerHead">
-        <h3> Your  Cart is empty </h3>
-        
+          <h3> Your Cart is empty </h3>
         </div>
       )}
     </div>

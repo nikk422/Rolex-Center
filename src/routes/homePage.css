@@ -1,9 +1,8 @@
 @import "/src/Components/main.css";
 
 .image-responsive{
-    width:96%;
+    width:98%;
     height:80vh;
-    margin: 1rem 0.5rem 0.5rem 0.5rem;
     border-radius: 0.5rem;
     box-shadow: 0 8px 12px 0 black;
 }
@@ -11,11 +10,6 @@
     opacity: 0.9;
 }
 .product-cate {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    gap: 2rem;
     margin: 1.5rem 1.5rem 0.3rem 1rem;
 }
 .category-title {

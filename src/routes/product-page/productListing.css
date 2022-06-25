@@ -2,28 +2,16 @@
 @import "../../Components/filter/filter.css";
 
 
-.product-contain{
-    display:flex;
-}
-.product-cate{
-    display:flex;
-    flex-wrap:wrap ;
-    margin-top:1rem;
-}
 .pro-name{
     font-family: 'Roboto Slab', serif;
 }
 .pro-cat{
     background-color:rgb(226, 216, 216);
-    position: relative;
-    padding:1rem;
 }
 .pro-cat:hover{
     box-shadow: 3px 2px 2px 3px rgb(99, 96, 96);
 }
-.showProd{
-    margin-top:3rem;
-}
+
 .img-pro{
     width:15.5rem; 
     height:16.5rem;
@@ -37,7 +25,6 @@
     padding:0.4rem;
     margin-top:0.2rem;
     font-weight:bold;
-    font-size:1rem;
     border-radius: 0.3rem;
 }
 .addCart{

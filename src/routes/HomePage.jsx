@@ -9,7 +9,7 @@ export default function HomePage() {
     <div>
       <Genre/>
       <div className="home-image">
-        <img src={home} alt="homePage" className="image-responsive" />
+        <img src={home} alt="homePage" className="image-responsive margin-1r" />
         <div className="shop-btn">
           <h2>
             Welcome To Rolex watch Gallery Here many types of Rolex watches
