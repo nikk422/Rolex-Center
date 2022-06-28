@@ -1,6 +1,7 @@
 import { useWishlistCart } from "../../context/wishlistCartContext";
 import "./cartListing.css";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const RenderCart = () => {
   const {
@@ -15,13 +16,11 @@ const RenderCart = () => {
       (acc, curr) => acc + curr.price * curr.cartQ,
       0
     );
-    console.log(totalCartValue);
     totalCartItem = cart.reduce(
       (acc, curr) => (curr.cartQ > 1 ? acc + (curr.cartQ - 1) : acc),
       0
     );
     totalCartItem = totalCartItem + cart.length;
-    console.log(totalCartItem);
   }
 
   return (
@@ -75,12 +74,17 @@ const RenderCart = () => {
                       <div className="btnContain flex-column">
                         <button
                           className="gowishlist"
-                          onClick={() =>
-                            dispatchWishlistCart({
-                              type: "REMOVE_FROM_CART",
-                              payload: item,
-                            })
-                          }
+                          onClick={() => {
+                            return (
+                              dispatchWishlistCart({
+                                type: "REMOVE_FROM_CART",
+                                payload: item,
+                              }),
+                              toast.error("Remove to Cart", {
+                                position: "top-right",
+                              })
+                            );
+                          }}
                         >
                           Remove from Cart
                         </button>
@@ -113,25 +117,24 @@ const RenderCart = () => {
           </div>
           <div className="pro-detail">
             <h4>PRICE DETAILS</h4>
-            <div class="price pro-contain flex-justify-between">
+            <div className="price pro-contain flex-justify-between">
               <p>ITEMS</p>
               <p>{totalCartItem}</p>
             </div>
-            <div class="delivery pro-contain flex-justify-between">
+            <div className="delivery pro-contain flex-justify-between">
               <p>Delivery Charges</p>
               <p> ₹0</p>
             </div>
-            <div class="total-amount pro-contain flex-justify-between">
+            <div className="total-amount pro-contain flex-justify-between">
               <h3>TOTAL AMOUNT</h3>
               <h3>₹{totalCartValue}</h3>
             </div>
-            <button class="orderBtn">PLACE ORDER</button>
+            <button className="orderBtn" onClick={()=>toast.success("Successfully Order Placed")}>PLACE ORDER</button>
           </div>
         </div>
       ) : (
         <div className="centerHead">
-        <h3> Your  Cart is empty </h3>
-        
+          <h3> Your Cart is empty </h3>
         </div>
       )}
     </div>

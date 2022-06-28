@@ -16,11 +16,6 @@ import rolex16 from "../../assets/rolex12.jpg";
 import rolex17 from "../../assets/rolex11.jpg";
 import rolex18 from "../../assets/rolex10.jpg";
 
-
-
-
-
-
 /**
  * Product Database can be added here.
  * You can add products of your wish with different attributes

@@ -8,18 +8,14 @@
 .logBlue{
     background-color:var(--login-color);
     width: 15rem;
-    font-size:1rem;
     color:var(--white-color);
-    padding:var(--special-padding);
     border:var(--border);
-    cursor: var(--cursor);
 }
 .logBlue:hover{
     background-color:var(--hover-color);
 }
 .alreadyAcount{
     border: var(--border);
-    padding:0.1rem;
     background-color:var(--white-color);
     margin-bottom: 0.5rem;
     cursor: var(--cursor);

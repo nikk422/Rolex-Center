@@ -4,37 +4,37 @@ import {Link} from "react-router-dom";
 
 export const SignUp=()=>{
     return(
-        <div class="container">
-        <div class="login">
+        <div className="container flex-column align-center">
+        <div className="login flex-column align-center gap-10px padding-17p margin-top-48p">
             <h1><strong> Sign Up</strong></h1>
-            <label for="email">
+            <label htmlFor="email">
                 Email address
-                <input type="text" placeholder="abcd@gmail.com" class="email authLable"></input>
+                <input type="text" placeholder="abcd@gmail.com" className="email authLable padding-8p font-10p"></input>
             </label>
-            <label for="First Name">
+            <label htmlFor="First Name">
                 First Name
-                <input type="text" placeholder="Enter your first name" class="firstname authLable"></input>
+                <input type="text" placeholder="Enter your first name" className="firstname authLable padding-8p font-10p"></input>
             </label>
-            <label for="lastName">
+            <label htmlFor="lastName">
                 Last Name
-                <input type="text" placeholder="Enter your last name" class="lastname authLable"></input>
+                <input type="text" placeholder="Enter your last name" className="lastname authLable padding-8p font-10p"></input>
             </label>
-            <label for="new-password">
+            <label htmlFor="new-password">
                 New Password
-                <input type="password" placeholder="**********" class="newpassword authLable"></input>
+                <input type="password" placeholder="**********" className="newpassword authLable padding-8p font-10p"></input>
             </label>
-            <label for="confirm-password">
+            <label htmlFor="confirm-password">
                 Confirm Password
-                <input type="password" placeholder="********" class="confirmpassword authLable"></input>
+                <input type="password" placeholder="********" className="confirmpassword authLable padding-8p font-10p"></input>
             </label>
-            <label for="terms-conditions">
-                <input type="checkbox" name="terms-conditions" class="ConditionBtn"></input>
+            <label htmlFor="terms-conditions">
+                <input type="checkbox" name="terms-conditions" className="ConditionBtn"></input>
                 I accept all Terms & Conditions
             </label>
 
-            <button class="CreateBtn logBlue">Create New Account</button>
+            <button className="CreateBtn logBlue padding-1p font-16p">Create New Account</button>
             <Link to="/Login">
-            <button class="alreadyAcount">Already have an Acount</button>
+            <button className="alreadyAcount padding-1p">Already have an Acount</button>
             </Link>
         </div>
     </div>

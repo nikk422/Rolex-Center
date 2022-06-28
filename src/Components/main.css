@@ -1,10 +1,10 @@
 :root {
-    --primary-color:#e0e0e0;
-    --secondary-color:rgb(15, 3, 46);
+    --primary-color:rgb(224 242 254);
+    --secondary-color:  rgb(2 132 199);
     --white-color:white;
     --logo-color:#e0e0e0;
-    --specailColor:rgb(241, 235, 237);
-    --shopHoverColor:rgb(255, 0, 234);
+    --specailColor:rgb(8, 185, 197);
+    --shopHoverColor:rgb(39, 111, 194);
     --badge-bg-color: rgb(161, 19, 19);
     --special-font-size:1.2rem;
     --special-padding:0.5rem;
