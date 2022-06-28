@@ -1,3 +1,27 @@
-## E-Commerce Backend
+# Rolex Watch Center
 
-This folder contains the Mock Backend created for E-Commerce App. It contains different API end-points and database configuration for building E-Commerce; so that you can focus on building Frontend.
+## Description
+Rolex Center is a Rolex watch website,in which user can shop his/her favourite
+Rolex Watch. It consist of various Categories of Rolex Watches which provide a whole satisfaction to customer.
+
+## Categories:
++ AIR-KING
++ GMT-MASTER
++ YACHT-MASTER
++ SEA-DWELLER
++ MILGAUSS
+
+## Features
++ Product Listing page
++ Filters 
++ Search
++ Cart Management
++ Wishlist Management
++ Toast for notifications.
+
+### Tech Stack
++ REACT-JS
++ HTML
++ CSS
++ REACT-ROUTER
++ REACT-TOASTIFY
