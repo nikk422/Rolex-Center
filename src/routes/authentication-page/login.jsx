@@ -9,13 +9,15 @@ export default function Login() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const loginHandler = () => {
-    toast.success("SuccessFully logged in", {
-      position: "top-right",
-    }),
-    setLogin((login) => !login);
-    navigate(location.state.from.pathname);
-  };
+const loginHandler=()=>{
+  setLogin((login) => !login);
+  navigate(location.state.from.pathname)
+  toast.success("Login Successfully",{
+    position: "top-right"
+  })
+}
+   
+   
 
   return (
     <div className="container flex-column align-center">
@@ -51,7 +53,7 @@ export default function Login() {
           </a>
         </label>
         <button
-          onClick={() => loginHandler()}
+          onClick={loginHandler}
           className="loginBtn padding-8p font-16p"
         >
           Login
