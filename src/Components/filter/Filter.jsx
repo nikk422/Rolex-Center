@@ -7,7 +7,7 @@ export const Filter = () => {
         "AIR-KING","YACHT-MASTER","DATE-JUST","GMT-MASTER","DIAMOND","DAY-DATE","SEA-DWELLER","MILGAUSS","OYSTER"
     ]
 
-    const {productState:{byRange,categories,byFastDelivery,byStock,byRating,sort},productDispatch}=useProductContext();
+    const {productState:{byRange,categories,byFastDelivery,byStock,sort},productDispatch}=useProductContext();
   return (
     <main class="main-container flex">
       <div class="filter-container flex-column">
