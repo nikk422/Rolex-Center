@@ -10,8 +10,8 @@ const CategoryContextProvider=({children})=>{
     useEffect(()=>{
         (async ()=>{
             try{
-                const categoryData=await axios.get("/api/products");
-                setCategory(categoryData.data.products)
+                const categoryData=await axios.get("/api/categories");
+                setCategory(categoryData.data.categories);
             }catch(err){
                 console.log(err);
             }

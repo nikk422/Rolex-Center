@@ -1,15 +1,12 @@
 import "./homePage.css";
-import {Genre} from "../Components/genre/Genre";
-import {GenreProduct} from "../Components/genre/GenreProduct";
-import home from "../../src/assets/hero4.jpg";
-import {Link} from "react-router-dom";
+import { GenreProduct } from "../Components/genre/GenreProduct";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
   return (
     <div>
-      <Genre/>
       <div className="home-image">
-        <img src={home} alt="homePage" className="image-responsive margin-1r" />
+        <img src="https://wristadvisor.com/wp-content/uploads/2022/03/Rolex-Day-Date-40-Ice-Blue-Dial-1.jpg" alt="homePage" className="image-responsive margin-1r" />
         <div className="shop-btn">
           <h2>
             Welcome To Rolex watch Gallery Here many types of Rolex watches
@@ -20,7 +17,7 @@ export default function HomePage() {
           </button>
         </div>
       </div>
-      <GenreProduct/>    
+      <GenreProduct />
     </div>
   );
 }

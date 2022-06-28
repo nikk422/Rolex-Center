@@ -8,10 +8,10 @@ import Product from "./routes/product-page/product";
 import MyCart from "./routes/mycart-page/mycart"
 import Wishlist  from "./routes/wishlist-page/wishlist";
 import  {Navbar} from "./Components/navbar/Navbar";
+import RequireAuth from "./private-auth/RequireAuth";
 import { Footer } from "./Components/footer/Footer";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 
 
 function App() {
@@ -23,8 +23,14 @@ function App() {
       <Route path="/Login" element ={<Login/>}/>
       <Route path="/SignUp" element ={<SignUp/>}/>
       <Route path="/Product" element ={<Product/>}/>
-      <Route path="/MyCart" element ={<MyCart/>}/>
-      <Route path="/Wishlist" element ={<Wishlist/>}/>
+      <Route path="/Wishlist" element={
+      <RequireAuth>
+        <Wishlist/>
+      </RequireAuth>}/>
+      <Route path="/MyCart" element={
+      <RequireAuth>
+        <MyCart/>
+      </RequireAuth>}/>
     </Routes>
     <ToastContainer/>
     <Footer />

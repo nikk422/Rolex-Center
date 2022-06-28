@@ -1,7 +1,22 @@
 import "./login.css";
 import { Link } from "react-router-dom";
 import {toast} from "react-toastify";
+import { useAuth } from "../../context/AuthContext";
+import { useLocation, useNavigate } from "react-router-dom";
+
+
 export default function Login() {
+
+  const { setLogin } = useAuth();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const loginHandler = () => {
+    setLogin((login) => !login);
+    navigate(location.state.from.pathname);
+  };
+
+
   return (
     <div className="container flex-column align-center">
       <div className="login flex-column align-center gap-10px padding-17p margin-top-48p">
@@ -35,16 +50,15 @@ export default function Login() {
             Forgot your password?
           </a>
         </label>
-        <Link to="/Product">
           <button
-            onClick={() =>
+            onClick={() =>{ return(
               toast.success("SuccessFully logged in", { position: "top-right" })
-            }
+             ),loginHandler()
+              }}
             className="loginBtn padding-8p font-16p"
           >
             Login
           </button>
-        </Link>
 
         <Link to="/SignUp">
           <button className="CreateBtn padding-1p">Create New Acount </button>

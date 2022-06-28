@@ -7,9 +7,6 @@ export default function Product() {
     <div className="product-contain flex">
       <Filter />
       <div className="showProd margin-top-48p">
-        <h4>
-          Showing All Products <small>(Showing 20 Products)</small>
-        </h4>
         <GetProduct />
       </div>
     </div>

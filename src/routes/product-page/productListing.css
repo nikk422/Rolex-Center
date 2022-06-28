@@ -5,12 +5,14 @@
 .pro-name{
     font-family: 'Roboto Slab', serif;
 }
-.pro-cat{
-    background-color:rgb(226, 216, 216);
-}
+
 .pro-cat:hover{
     box-shadow: 3px 2px 2px 3px rgb(99, 96, 96);
 }
+.Brand-name{
+    font-weight: bold;
+    font-size: var(--font-size)}
+
 
 .img-pro{
     width:15.5rem; 
@@ -45,15 +47,7 @@
     background-color:rgb(88, 79, 88);
 }
 .addCart:hover{
-    background-color:rgb(30, 30, 68);
-}
-.go-to-cart{
-    width:14.8rem;
-    padding:0.4rem;
-    margin-top:0.2rem;
-    font-weight:bold;
-    font-size:1rem;
-    border-radius: 0.3rem;
+    background-color:rgb(17, 155, 235);
 }
 .heart{
     position: absolute;

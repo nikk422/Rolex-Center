@@ -1,8 +1,7 @@
 import "./wishlistListing.css";
 import { useWishlistCart } from "../../context/wishlistCartContext";
 import { Link } from "react-router-dom";
-import {toast} from"react-toastify";
-  
+import { toast } from "react-toastify";
 
 const RenderWishlist = () => {
   const {
@@ -10,14 +9,12 @@ const RenderWishlist = () => {
     dispatchWishlistCart,
   } = useWishlistCart();
 
-
-
   return (
     <div>
       <div className="centerHead">
         <h2>My wishlist ({wishlist.length})</h2>
         <Link to="/Product">
-          <button  className="shop-now">SHOP NOW</button>
+          <button className="shop-now">SHOP NOW</button>
         </Link>
       </div>
       <div className="product-cate flex flex-wrap margin-top-16p flex-center positon-relative gap-2r">
@@ -46,14 +43,17 @@ const RenderWishlist = () => {
               </h3>
               {wishlist.some((data) => data.id === item.id) ? (
                 <button
-                  onClick={() =>{return(
-                    dispatchWishlistCart({
-                      type: "REMOVE_FROM_WISHLIST",
-                      payload: item,
-                    }),
-                    toast.error("Remove to Wishlist",{position: "top-right"})
-                    )}
-                  }
+                  onClick={() => {
+                    return (
+                      dispatchWishlistCart({
+                        type: "REMOVE_FROM_WISHLIST",
+                        payload: item,
+                      }),
+                      toast.error("Remove to Wishlist", {
+                        position: "top-right",
+                      })
+                    );
+                  }}
                   className=" heart red-heart"
                 >
                   <i style={{ fontSize: "27px" }} class="fa">
@@ -78,7 +78,7 @@ const RenderWishlist = () => {
 
               {cart.some((data) => data.id === item.id) ? (
                 <Link to="/MyCart">
-                  <button class="cartBtn goCart font-16p">Move to Cart</button>
+                  <button class="CartBtn goCart font-16p">Move to Cart</button>
                 </Link>
               ) : (
                 <button

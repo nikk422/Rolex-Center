@@ -6,7 +6,6 @@
     background-color: var(--secondary-color);
     color: var(--white-color);
     padding: 1.5rem;
-    border-radius: 0rem 0rem 0rem 3rem;
 
 }
 
@@ -30,7 +29,6 @@
 
 .navbar .header-container .heading {
     font-family: 'Satisfy', cursive;
-    flex: 1;
     text-align: left;
     font-size: 2rem;
     font-weight: bold;
@@ -65,7 +63,7 @@
 }
 
 .headHover:hover {
-    color: rgb(179, 24, 132);
+    color: rgb(82, 23, 59);
 
 }
 

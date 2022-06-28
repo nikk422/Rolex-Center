@@ -1,10 +1,4 @@
 import { v4 as uuid } from "uuid";
-// import watch1 from "../../assets/watch5.jpg";
-import watch2 from "../../assets/watch6.jpg";
-import watch3 from "../../assets/rolex5.jpg";
-import watch4 from "../../assets/rolex7.jpg";
-import watch5 from "../../assets/rolex10.jpg";
-import watch7 from "../../assets/watch7.jpg";
 
 /**
  * Category Database can be added here.
@@ -12,30 +6,31 @@ import watch7 from "../../assets/watch7.jpg";
  * */
 
 export const categories = [
+ 
   {
     _id: uuid(),
-    categoryName: "DATE-JUST",
-    image:watch7
+    categoryName: "GMT-MASTER",
+    image:"https://z4t7cm-bkr6600vqhyl.cloudmaestro.com/3p7OB39iP/media/wysiwyg/aIMG_9760.jpg.pagespeed.ic.Wbo5f3oj58.webp"
   },
   {
     _id: uuid(),
-    categoryName: "DATE-JUST",
-    image:watch2
+    categoryName: "AIR-KING",
+    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj6YmDozaiZCW6Z7haDgv2meMtpB6FMzYfK1DAVIPE6PUfC9Laoa25kjnK_2VFqKHaX7c&usqp=CAU"
   },
   {
     _id: uuid(),
-    categoryName: "DATE-JUST",
-    image:watch3
+    categoryName: "YACHT-MASTER",
+    image:"https://vl0fvu-bkr6600vqhyl.cloudmaestro.com/3p7OB39iP/media/wysiwyg/aIMG_9240.jpg.pagespeed.ic.5KlYIpfRL5.webp"
   },
   {
     _id: uuid(),
-    categoryName: "DATE-JUST",
-    image:watch4
+    categoryName: "SEA-DWELLER",
+    image:"https://z4t7cm-bkr6600vqhyl.cloudmaestro.com/3p7OB39iP/media/wysiwyg/aSenza_titolo-2.jpg.pagespeed.ic.upM7yVIMdD.webp"
   },
   {
     _id: uuid(),
-    categoryName: "DATE-JUST",
-    image:watch5
+    categoryName: "MILGAUSS",
+    image:"https://z4t7cm-bkr6600vqhyl.cloudmaestro.com/3p7OB39iP/media/wysiwyg/aIMG_9916.jpg.pagespeed.ic.MikslwHjYo.webp"
   },
 
 ];
