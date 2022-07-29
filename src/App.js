@@ -10,6 +10,7 @@ import Wishlist  from "./routes/wishlist-page/wishlist";
 import  {Navbar} from "./Components/navbar/Navbar";
 import RequireAuth from "./private-auth/RequireAuth";
 import { Footer } from "./Components/footer/Footer";
+import Logout from "./routes/authentication-page/Logout"
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -21,6 +22,7 @@ function App() {
     <Routes>
       <Route path="/" element ={<HomePage/>}/>
       <Route path="/Login" element ={<Login/>}/>
+      <Route path="/logout" element ={<Logout/>}/>
       <Route path="/SignUp" element ={<SignUp/>}/>
       <Route path="/Product" element ={<Product/>}/>
       <Route path="/Wishlist" element={

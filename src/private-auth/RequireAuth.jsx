@@ -3,10 +3,12 @@ import {useAuth} from "../context/AuthContext";
 
 const RequireAuth=({children})=>{
     const location = useLocation()
-    const {login}=useAuth()
-    return login ? (
+    const {login : {user}}=useAuth();
+
+
+    return user ? (
         children
     ): 
-    <Navigate to="/login" state={{from: location}} replace/>
+    <Navigate to="/login" state={{pathname: location.pathname }} replace/>
 }
 export default RequireAuth;
