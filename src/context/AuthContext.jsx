@@ -23,6 +23,7 @@ const AuthProvider = ({ children }) => {
 
       if (status === 200){
           toast.success(`Welcome Back ${data.foundUser.firstName}`)
+
       }
 
   } catch (err){
@@ -49,6 +50,7 @@ const AuthProvider = ({ children }) => {
 
         if (status === 201){
             toast.success(`Welcome ${data.createdUser.firstName}`)
+
         }
     } catch (err) {
         console.log(err)
