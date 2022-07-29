@@ -17,8 +17,6 @@ const loginHandler=()=>{
   })
 }
    
-   
-
   return (
     <div className="container flex-column align-center">
       <div className="login flex-column align-center gap-10px padding-17p margin-top-48p">
