@@ -12,17 +12,11 @@ const Checkout = () => {
   } = useWishlistCart();
 
   let totalCartValue = 0;
-  let totalCartItem = 0;
   if (cart[0] !== undefined) {
     totalCartValue = cart.reduce(
       (acc, curr) => acc + curr.price * curr.cartQ,
       0
     );
-    totalCartItem = cart.reduce(
-      (acc, curr) => (curr.cartQ > 1 ? acc + (curr.cartQ - 1) : acc),
-      0
-    );
-    totalCartItem = totalCartItem + cart.length;
   }
 
   const loadScript = async (src) => {
