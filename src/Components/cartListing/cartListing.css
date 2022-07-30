@@ -1,68 +1,88 @@
 @import "../filter/filter.css";
 
-.pro-container{
-    height:35vh;
-    gap:1.5rem;   
+.pro-container {
+    height: 35vh;
+    gap: 1.5rem;
     border: 1px solid black;
-    margin:2rem;
-    background-color:rgb(226, 216, 216);
+    margin: 2rem;
+    background-color: rgb(226, 216, 216);
 }
 
-.btnContain{
+.btnContain {
     margin-top: 6rem;
-    padding-bottom: 2rem;;
+    padding-bottom: 2rem;
+    ;
 }
-.gowishlist{
-    width:12.8rem;
-    padding:0.2rem;
-    margin-top:0.5rem;
-    font-weight:bold;
-    font-size:1rem;
+
+.gowishlist {
+    width: 12.8rem;
+    padding: 0.2rem;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
     border-radius: 0.3rem;
 }
-.goCart{
+
+.goCart {
     background-color: rgb(59, 40, 57);
-    color:var(--white-color);
-}
-.goCart:hover{
-    background-color:rgb(88, 79, 88);
+    color: var(--white-color);
 }
 
-.pro-detail{
-    background-color:rgb(176, 192, 194);
-    width:18rem;
-    height:25vh;
-    padding:1rem;
-    margin-top:2rem;
+.goCart:hover {
+    background-color: rgb(88, 79, 88);
 }
-.count-Btn{
-    width:1.5rem;
-     height:1.5rem;
-    border-radius:50%;
-    font-size:1rem;
-    margin: 0.5rem;
-}
-.cartItems{
-    margin-top:1rem;
+
+.pro-detail {
+    background-color: rgb(176, 192, 194);
+    width: 18rem;
+    height: fit-content;
+    padding: 1rem;
     margin-top: 2rem;
 }
-.count-num{
-    border:1px solid black;
-    padding:0.1rem 0.5rem 0.1rem 0.5rem;
-    font-size:1rem;
-}
-.pro-contain{
-    padding:0.5rem;
+
+.count-Btn {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    font-size: 1rem;
+    margin: 0.5rem;
 }
 
-.orderBtn{
-    width:15rem;
-    padding:0.5rem;
-    font-weight: bold;
-    background-color:rgb(44, 44, 131);
-    color:var(--white-color);
-    cursor:var(--cursor);
+.cartItems {
+    margin-top: 1rem;
+    margin-top: 2rem;
 }
-.orderBtn:hover{
-    background-color:rgb(69, 69, 185);
+
+.count-num {
+    border: 1px solid black;
+    padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+    font-size: 1rem;
+}
+
+.pro-contain {
+    padding: 0.5rem;
+}
+
+.orderBtn {
+    width: 15rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    background-color: rgb(44, 44, 131);
+    color: var(--white-color);
+    cursor: var(--cursor);
+}
+.disableBtn {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.orderBtn:hover {
+    background-color: rgb(69, 69, 185);
+}
+.address-contain{
+    display: flex;
+    gap:1rem;
+    width: 25vw;
+    border:2px solid black;
+    padding:1rem;
 }

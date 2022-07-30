@@ -118,8 +118,8 @@ const RenderCart = () => {
           <div className="pro-detail">
             <h4>PRICE DETAILS</h4>
             <div className="price pro-contain flex-justify-between">
-              <p>ITEMS</p>
-              <p>{totalCartItem}</p>
+              <p>Price ({totalCartItem} items)</p>
+              <p>{totalCartValue}</p>
             </div>
             <div className="delivery pro-contain flex-justify-between">
               <p>Delivery Charges</p>
@@ -129,7 +129,9 @@ const RenderCart = () => {
               <h3>TOTAL AMOUNT</h3>
               <h3>₹{totalCartValue}</h3>
             </div>
-            <button className="orderBtn" onClick={()=>toast.success("Successfully Order Placed")}>PLACE ORDER</button>
+            <Link to="/checkout">
+            <button className="orderBtn">PLACE ORDER</button>
+            </Link>
           </div>
         </div>
       ) : (

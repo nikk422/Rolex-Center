@@ -20,7 +20,7 @@ export default function Login() {
     if (!error.isError) {
       LoginPage(loginDetail);
     }
-  }, [error]);
+  }, [ error ]);
 
   useEffect(() => {
     if (login.user && location.state !== null) {
