@@ -13,6 +13,7 @@ import { Footer } from "./Components/footer/Footer";
 import Logout from "./routes/authentication-page/Logout"
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Checkout from "./routes/CheckOut-page/Checkout";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <Route path="/logout" element ={<Logout/>}/>
       <Route path="/SignUp" element ={<SignUp/>}/>
       <Route path="/Product" element ={<Product/>}/>
+      <Route path="/checkout" element ={<Checkout/>}/>
       <Route path="/Wishlist" element={
       <RequireAuth>
         <Wishlist/>
